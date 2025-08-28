@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your favourite music is here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand">
+                <span style="font-size: 2rem; color: #1db954; margin-right: 10px;">♪</span> 
+                Spotify
+            </li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+            <h1>🎵 Your Music Library</h1>
+            <div class="loading" id="loading">Loading your songs...</div>
+            <div class="songItemContainer" id="songContainer" style="display: none;">
+                <!-- Songs will be dynamically loaded here -->
+            </div>
+            <div class="error" id="errorMsg" style="display: none;">
+                Unable to load songs. Make sure your audio files are in the 'songs' folder.
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <i class="prev-icon" id="previous">⏮️</i>
+            <i class="play-icon" id="masterPlay">▶️</i>
+            <i class="next-icon" id="next">⏭️</i> 
+        </div>
+        <div class="songInfo">
+            <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnlNelY0VuGHzUrYFhHBHQhBl0j4YhDBKmASwCNTkGYxFAcmfh6VEGPIMBCgEAO5IAAA==" width="42px" alt="" id="gif"> 
+            <span id="masterSongName">Select a song to play</span>
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
+
+</body>
+</html>
